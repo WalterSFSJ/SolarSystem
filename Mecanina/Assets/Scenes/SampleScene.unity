@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  radius: 30.05
   linearSpeed: 1.14
 --- !u!96 &136583565
 TrailRenderer:
@@ -223,7 +223,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.15315247
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  radius: 1
   linearSpeed: 6.28
 --- !u!96 &136645057
 TrailRenderer:
@@ -432,7 +432,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.15315247
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -584,7 +584,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  radius: 0.72
   linearSpeed: 7.38
 --- !u!96 &493836534
 TrailRenderer:
@@ -641,7 +641,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.15315247
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -930,7 +930,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  radius: 9.58
   linearSpeed: 2.04
 --- !u!96 &530106033
 TrailRenderer:
@@ -987,7 +987,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.15315247
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1185,9 +1185,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 808798491}
-  - component: {fileID: 808798492}
   - component: {fileID: 808798494}
   - component: {fileID: 808798493}
+  - component: {fileID: 808798492}
   m_Layer: 0
   m_Name: Sol
   m_TagString: Untagged
@@ -1222,14 +1222,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb250a6faee0b444c9b9a440f7ab48d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  addedSpeed: 0.01
-  deltaTime: 0
-  typeOfMovement: 0
+  deltaTime: 0.001
+  typeOfMovement: 2
   allOrbits:
   - {fileID: 1682241387}
   - {fileID: 493836533}
   - {fileID: 136645056}
-  - {fileID: 2004485753}
   - {fileID: 2004485753}
   - {fileID: 1283739452}
   - {fileID: 530106032}
@@ -1268,7 +1266,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10756, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 15303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1337,7 +1335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  radius: 5.2
   linearSpeed: 2.75
 --- !u!96 &1283739453
 TrailRenderer:
@@ -1394,7 +1392,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.15315247
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1546,7 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  radius: 19.22
   linearSpeed: 1.43
 --- !u!96 &1391962413
 TrailRenderer:
@@ -1603,7 +1601,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.15315247
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1786,7 +1784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  radius: 0.39
   linearSpeed: 10.07
 --- !u!96 &1682241388
 TrailRenderer:
@@ -1843,7 +1841,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.15315247
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -1995,7 +1993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 0
+  radius: 1.52
   linearSpeed: 5.06
 --- !u!96 &2004485754
 TrailRenderer:
@@ -2052,7 +2050,7 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.15315247
         inSlope: 0
         outSlope: 0
         tangentMode: 0

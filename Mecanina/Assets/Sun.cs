@@ -12,12 +12,11 @@ public class Sun : MonoBehaviour
     }
 
 
-    [SerializeField] float addedSpeed;
     [SerializeField] public float deltaTime;
 
     [SerializeField] Method typeOfMovement;
 
-    [SerializeField] public Orbit[] allOrbits;
+    [SerializeField] public Orbit[] allOrbits;  
 
     public Vector3 position;
 
@@ -38,7 +37,7 @@ public class Sun : MonoBehaviour
             case Method.VERLET:
                 foreach (Orbit orb in allOrbits)
                 {
-                    orb.MoveVerlet(addedSpeed);
+                    orb.MoveVerlet(deltaTime);
                 }
                 break;
 
@@ -54,7 +53,7 @@ public class Sun : MonoBehaviour
 
                 foreach (Orbit orb in allOrbits)
                 {
-                    orb.MoveAnalytical(addedSpeed);
+                    orb.MoveAnalytical(deltaTime);
                 }
 
                 break;
