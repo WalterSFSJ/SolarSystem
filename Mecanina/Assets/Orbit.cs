@@ -3,50 +3,49 @@ using UnityEngine;
 
 public class Orbit : MonoBehaviour
 {
+    [SerializeField] private float mass;
+    [SerializeField] private float divider;
+
     [SerializeField] private float radius; //AU
     [SerializeField] private float linearSpeed; //AU_year
 
-    Vector3 V0;
-    Vector3 S0;
-    Vector3 S_i;
 
-    Vector3 acceleration;
+    private Vector3 V0;
+    private Vector3 S0;
+    private Vector3 S_i;
 
-    float time;
+    private Vector3 acceleration;
+
 
     bool firstTime = true;
+    private float G = 6.6742f;
+    private float sunMass = 10.0f;
+    private float linearAcceleration;
 
     private void Start()
     {
-        transform.position = new Vector3(transform.position.x * 2, 0.0f, 0.0f);
+        transform.position = new Vector3(transform.position.x, 0.0f, 0.0f);
 
         radius = transform.position.x;
 
-        acceleration = new Vector3(0.0f, 0.0f, linearSpeed);
-        V0 = acceleration;
+        V0 = new Vector3(0.0f, 0.0f, linearSpeed);
+        
 
         S0 = transform.position;
+
+        for (int i = 0; i < divider; i++)
+        {
+            //mass /= 10;
+        }                
     }
-
-    public void MoveAnalytical(float dt)
-    {
-        
-        float currentAngle = GetRadiansFromSun();
-        float newAngle = currentAngle + (linearSpeed * dt);
-        
-       
-        float newX = radius * Mathf.Cos(newAngle) ;
-        float newZ = radius * Mathf.Sin(newAngle);
-
-        transform.position = new Vector3(newX, transform.position.y, newZ);
-    }
-
-
 
     public void MoveVerlet(float dt) {
+        float distanceToSun = Vector3.Distance(Sun.instance.position, transform.position);
+        linearAcceleration = ((G * sunMass) / (distanceToSun * distanceToSun));
 
         Vector3 directionToSun = (Sun.instance.position - transform.position).normalized;
-        acceleration = directionToSun * (linearSpeed * linearSpeed / radius);
+        acceleration = directionToSun * linearAcceleration;
+
 
         if (firstTime)
         {
@@ -64,14 +63,6 @@ public class Orbit : MonoBehaviour
 
             S_i = previousPosition;
         }
-        
-    }
-
-    float GetRadiansFromSun() {
-
-        Vector3 distance = transform.position - Sun.instance.position;
-
-        return Mathf.Atan2(distance.z, distance.x);
     }
     
 }

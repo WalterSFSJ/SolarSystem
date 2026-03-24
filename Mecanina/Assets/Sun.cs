@@ -8,7 +8,6 @@ public class Sun : MonoBehaviour
     {
         VERLET,
         RUNGEKUTTA,
-        ANALYTICAL
     }
 
 
@@ -49,14 +48,6 @@ public class Sun : MonoBehaviour
 
 
 
-            case Method.ANALYTICAL:
-
-                foreach (Orbit orb in allOrbits)
-                {
-                    orb.MoveAnalytical(deltaTime);
-                }
-
-                break;
 
 
                 

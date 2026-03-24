@@ -166,6 +166,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 5.15
+  divider: 5
   radius: 30.05
   linearSpeed: 1.14
 --- !u!96 &136583565
@@ -375,6 +377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 3
+  divider: 6
   radius: 1
   linearSpeed: 6.28
 --- !u!96 &136645057
@@ -584,6 +588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 2.45
+  divider: 6
   radius: 0.72
   linearSpeed: 7.38
 --- !u!96 &493836534
@@ -930,6 +936,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 2.86
+  divider: 4
   radius: 9.58
   linearSpeed: 2.04
 --- !u!96 &530106033
@@ -1223,7 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deltaTime: 0.001
-  typeOfMovement: 2
+  typeOfMovement: 0
   allOrbits:
   - {fileID: 1682241387}
   - {fileID: 493836533}
@@ -1335,6 +1343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 9.55
+  divider: 4
   radius: 5.2
   linearSpeed: 2.75
 --- !u!96 &1283739453
@@ -1544,6 +1554,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 4.36
+  divider: 5
   radius: 19.22
   linearSpeed: 1.43
 --- !u!96 &1391962413
@@ -1784,6 +1796,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 1.66
+  divider: 7
   radius: 0.39
   linearSpeed: 10.07
 --- !u!96 &1682241388
@@ -1993,6 +2007,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b8b53b8eb33514080ade63e74e8774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mass: 3.23
+  divider: 7
   radius: 1.52
   linearSpeed: 5.06
 --- !u!96 &2004485754
