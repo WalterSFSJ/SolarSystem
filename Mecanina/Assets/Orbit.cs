@@ -4,7 +4,6 @@ using UnityEngine;
 public class Orbit : MonoBehaviour
 {
     [SerializeField] private float mass;
-    [SerializeField] private float divider;
 
     [SerializeField] private float radius; //AU
     [SerializeField] private float linearSpeed; //AU_year
@@ -19,7 +18,7 @@ public class Orbit : MonoBehaviour
 
     bool firstTime = true;
     private float G = 6.6742f;
-    private float sunMass = 10.0f;
+    private float sunMass = 1.0f;
     private float linearAcceleration;
 
     private void Start()
@@ -33,10 +32,7 @@ public class Orbit : MonoBehaviour
 
         S0 = transform.position;
 
-        for (int i = 0; i < divider; i++)
-        {
-            //mass /= 10;
-        }                
+                  
     }
 
     public void MoveVerlet(float dt) {
