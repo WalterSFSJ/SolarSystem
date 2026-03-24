@@ -5,7 +5,6 @@ public class Orbit : MonoBehaviour
 {
     [SerializeField] private float mass;
 
-    [SerializeField] private float radius; //AU
     [SerializeField] private float linearSpeed; //AU_year
 
 
@@ -17,22 +16,18 @@ public class Orbit : MonoBehaviour
 
 
     bool firstTime = true;
-    private float G = 6.6742f;
+    private float G;
     private float sunMass = 1.0f;
     private float linearAcceleration;
 
     private void Start()
     {
-        transform.position = new Vector3(transform.position.x, 0.0f, 0.0f);
-
-        radius = transform.position.x;
-
         V0 = new Vector3(0.0f, 0.0f, linearSpeed);
         
 
         S0 = transform.position;
 
-                  
+        G = 4 * Mathf.PI * Mathf.PI;
     }
 
     public void MoveVerlet(float dt) {

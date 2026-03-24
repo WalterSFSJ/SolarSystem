@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &136583563
 Transform:
   m_ObjectHideFlags: 0
@@ -905,7 +905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &530106031
 Transform:
   m_ObjectHideFlags: 0
@@ -1234,9 +1234,6 @@ MonoBehaviour:
   - {fileID: 136645056}
   - {fileID: 2004485753}
   - {fileID: 1283739452}
-  - {fileID: 530106032}
-  - {fileID: 1391962412}
-  - {fileID: 136583564}
   position: {x: 0, y: 0, z: 0}
   focus: {fileID: 1609262821}
 --- !u!33 &808798493
@@ -1254,7 +1251,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 808798488}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1521,7 +1518,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1391962411
 Transform:
   m_ObjectHideFlags: 0
