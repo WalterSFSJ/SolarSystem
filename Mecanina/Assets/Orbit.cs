@@ -31,29 +31,34 @@ public class Orbit : MonoBehaviour
     }
 
     public void MoveVerlet(float dt) {
-        float distanceToSun = Vector3.Distance(Sun.instance.position, transform.position);
-        linearAcceleration = ((G * sunMass) / (distanceToSun * distanceToSun));
 
-        Vector3 directionToSun = (Sun.instance.position - transform.position).normalized;
-        acceleration = directionToSun * linearAcceleration;
 
+        SetAcceleration();
+
+
+        Vector3 previousPosition = transform.position;
 
         if (firstTime)
         {
             transform.position = S0 + V0 * dt + acceleration / 2 * dt * dt;
             
-            S_i = S0;
-
             firstTime = false;
         }
         else { 
             
-            Vector3 previousPosition = transform.position;
-            
             transform.position = 2 * transform.position - S_i + acceleration * dt * dt;
 
-            S_i = previousPosition;
         }
+
+        S_i = previousPosition;
+    }
+
+    void SetAcceleration() {
+        float distanceToSun = Vector3.Distance(Sun.instance.position, transform.position);
+        linearAcceleration = ((G * sunMass) / (distanceToSun * distanceToSun));
+
+        Vector3 directionToSun = (Sun.instance.position - transform.position).normalized;
+        acceleration = directionToSun * linearAcceleration;
     }
     
 }
