@@ -7,17 +7,15 @@ public class Sun : MonoBehaviour
     enum Method
     {
         VERLET,
-        RUNGEKUTTA,
-        ANALYTICAL
+        RUNGEKUTTA
     }
 
 
-    [SerializeField] float addedSpeed;
     [SerializeField] public float deltaTime;
 
     [SerializeField] Method typeOfMovement;
 
-    [SerializeField] public Orbit[] allOrbits;
+    [SerializeField] public Orbit[] allOrbits;  
 
     public Vector3 position;
 
@@ -38,27 +36,9 @@ public class Sun : MonoBehaviour
             case Method.VERLET:
                 foreach (Orbit orb in allOrbits)
                 {
-                    orb.MoveVerlet(addedSpeed);
+                    orb.MoveVerlet(deltaTime);
                 }
                 break;
-
-
-
-            case Method.RUNGEKUTTA:
-                break;
-
-
-
-
-            case Method.ANALYTICAL:
-
-                foreach (Orbit orb in allOrbits)
-                {
-                    orb.MoveAnalytical(addedSpeed);
-                }
-
-                break;
-
 
                 
             default:
