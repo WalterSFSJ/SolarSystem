@@ -7,7 +7,7 @@ public class Sun : MonoBehaviour
     enum Method
     {
         VERLET,
-        RUNGEKUTTA,
+        RUNGEKUTTA
     }
 
 
@@ -39,16 +39,6 @@ public class Sun : MonoBehaviour
                     orb.MoveVerlet(deltaTime);
                 }
                 break;
-
-
-
-            case Method.RUNGEKUTTA:
-                break;
-
-
-
-
-
 
                 
             default:
